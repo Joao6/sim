@@ -24,8 +24,8 @@ public class RecuperacaoSenhaService implements BaseRecuperacaoSenhaService {
             EmailService es = new EmailService();
             String assunto = "Recuperação de senha SIM.";
             String texto = "Olá, " + entity.getUsuario().getNome()
-                    + ". Para a redefinit sua senha no sistema, acesse o link: "
-                    + "http://localhost:8084/sim/recuperar-senha/" + entity.getHash() + "/" + entity.getUsuario().getId();
+                    + ". Para a redefinir sua senha no sistema, acesse o link: "
+                    + "https://app-sim.herokuapp.com/recuperar-senha/" + entity.getHash() + "/" + entity.getUsuario().getId();
             es.sendEmail(entity.getUsuario().getEmail(), assunto, texto);
 
             conn.commit();
