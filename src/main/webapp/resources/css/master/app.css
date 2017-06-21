@@ -1,0 +1,41 @@
+.title-content{
+    border: 1px solid #e2e2e2;
+    background-color: #eae8e8;
+}
+
+.title-content h4{
+    text-align: center;
+    font-weight: 500;
+    color: #3c3f42;
+}
+
+@media only screen and (max-width: 992px){
+    table.responsive-table tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    tr td {
+        max-width: 300px;
+        white-space:normal;
+    }
+}
+
+.btn-add{
+    margin-bottom: 15px;
+}
+
+.row-btn{
+    margin-bottom: -50px;
+}
+
+.row-pagination{
+    margin-bottom: -30px;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+    color: black;
+}
