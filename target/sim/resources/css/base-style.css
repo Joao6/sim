@@ -1,0 +1,163 @@
+/* 
+    Created on : 11/03/2017, 12:24:15
+    Author     : Joao Pedro
+*/
+
+.link-anterior{
+    color: #a0a0a0 !important;    
+    font-size: 12pt  !important;    
+    display: inline;
+}
+
+.color-green{
+    color: #4CAF50;
+}
+
+.link-ativo{
+    color: black !important;   
+    font-size: 12pt !important; 
+    display: inline;
+}
+
+.breadcrumb:before{
+    color: #a0a0a0 !important;
+    font-size: 13pt !important;
+}
+
+.links{
+    margin-top: 2%;
+}
+
+.formulario {
+    border: 1px solid #e2e2e2;
+    margin-top: 2%;
+    padding: 2% 3% 1% 3%;
+    margin-bottom: 2%;
+}
+
+.titulo {
+    /*font-family: 'Montserrat', sans-serif;*/
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+nav .nav-wrapper{
+    background-color: #607d8b;
+}
+
+.header-page h5{
+    display: inline;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.header-page h4 span{
+    font-size: 12pt;
+    font-weight: 500;
+    text-transform: none;
+    color: grey
+}
+
+.card-panel{
+    padding: 35px !important;
+}
+
+.links-footer li{
+    display: inline-block;
+    margin: 5px;
+}
+
+/*label focus color*/ 
+.input-field input[type=text]:focus + label {
+    color: #607d8b !important;
+    font-weight: 600;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #0d47a1  !important;
+    box-shadow: 0 1px 0 0 #0d47a1 !important;
+}
+
+.input-field input[type=email]:focus + label {
+    color: #607d8b !important;
+    font-weight: 600;
+}
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #0d47a1  !important;
+    box-shadow: 0 1px 0 0 #0d47a1 !important;
+}
+
+.input-field input[type=password]:focus + label {
+    color: #607d8b !important;
+    font-weight: 600;
+}
+
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #0d47a1  !important;
+    box-shadow: 0 1px 0 0 #0d47a1 !important;
+}
+
+.materialize-textarea:focus {
+    border-bottom: 1px solid #0d47a1  !important;
+    box-shadow: 0 1px 0 0 #0d47a1 !important;
+}
+
+.materialize-textarea:focus + label {
+    color: #0d47a1 !important;
+    font-weight: 600;
+}
+
+.input-field label {
+    color: #0d47a1 !important;
+}
+
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #0d47a1 !important;
+    box-shadow: 0 1px 0 0 #0d47a1 !important;
+}
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #0d47a1 !important;
+}
+
+.nav-wrapper span{
+    font-size: 12pt;
+    font-weight: normal;
+}
+
+.logo{
+    margin-top: 3px;
+}
+
+.erros .error{
+    color: red !important;
+}
+
+.error-form{
+    border-color: red !important;
+    background-color: #f7e5e5 !important;
+}
+
+.buttons{
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .buttons{
+        margin-right: 0px;
+    }
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+    color: black;
+}
+
+.alert{
+    background-color: #4caf50;
+    color: white;
+    border-radius: 130px;    
+}
