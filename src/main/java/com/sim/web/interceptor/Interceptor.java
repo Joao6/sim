@@ -51,19 +51,19 @@ public class Interceptor implements HandlerInterceptor {
             return true;
         }
 
-        if (url.endsWith("/sim")) {
+        if (url.endsWith("/")) {
             if (req.getSession().getAttribute("usuarioLogado") == null) {
-                res.sendRedirect("/sim/login");
+                res.sendRedirect("/login");
                 return false;
             }
         }
         
 
         //URL's que não necessitam de login são tratadas aqui
-        if (!url.endsWith("/sim/login") && !url.endsWith("/sim/recuperar-senha") && !url.endsWith("/sim/recuperar-senha/rest/") && !url.contains("/sim/recuperar-senha/")) {
+        if (!url.endsWith("/login") && !url.endsWith("/recuperar-senha") && !url.endsWith("/recuperar-senha/rest/") && !url.contains("/recuperar-senha/")) {
             if (req.getSession().getAttribute("usuarioLogado") == null) {
                 req.getSession().setAttribute("urlDesejada", url);
-                res.sendRedirect("/sim/login");
+                res.sendRedirect("/login");
                 return false;
             }
         }       
@@ -83,20 +83,20 @@ public class Interceptor implements HandlerInterceptor {
 
             req.getSession().setAttribute("usuarioLogado", usuario);
             if (usuario instanceof Master) {
-                if (url.contains("/sim/instituicao/") || url.contains("/sim/profissional/")) {
-                    res.sendRedirect("/sim/master/permissao-negada");
+                if (url.contains("/instituicao/") || url.contains("/profissional/")) {
+                    res.sendRedirect("/master/permissao-negada");
                     return false;
                 }
             }
             if (usuario instanceof Instituicao) {
-                if (url.contains("/sim/master/") || url.contains("/sim/profissional/")) {
-                    res.sendRedirect("/sim/instituicao/permissao-negada");
+                if (url.contains("/master/") || url.contains("/profissional/")) {
+                    res.sendRedirect("/instituicao/permissao-negada");
                     return false;
                 }
             }
             if (usuario instanceof Profissional) {
-                if (url.contains("/sim/master/") || url.contains("/sim/instituicao/")) {
-                    res.sendRedirect("/sim/profissional/permissao-negada");
+                if (url.contains("/master/") || url.contains("/instituicao/")) {
+                    res.sendRedirect("/profissional/permissao-negada");
                     return false;
                 }
             }
