@@ -28,6 +28,16 @@ public class ConnectionManager {
         dataSource.setPassword("ca2bfa57369e3bfbf5bcdb739db97342c2cac54cc3de6b5da770d7b1d5de1613");
         dataSource.setMaxConnections(30);
         dataSource.setInitialConnections(10);
+        
+//        dataSource = new PGPoolingDataSource();
+//        dataSource.setDataSourceName("sim");
+//        dataSource.setServerName("localhost");
+//        dataSource.setPortNumber(5432);
+//        dataSource.setDatabaseName("sim");
+//        dataSource.setUser("postgres");
+//        dataSource.setPassword("postgres");
+//        dataSource.setMaxConnections(30);
+//        dataSource.setInitialConnections(10);
     }
 
     private static ConnectionManager instance;

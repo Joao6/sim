@@ -1,6 +1,6 @@
 
 angular.module("SIM_APP", [])
-        .value('urlBase', '/recuperar-senha/rest')
+        .value('urlBase', '/recuperar-senha/')
         .controller("RecuperarSenhaController", function ($http, urlBase, $location) {
             var self = this;
             self.email = undefined;
@@ -19,7 +19,7 @@ angular.module("SIM_APP", [])
 
                 $http({
                     method: 'GET',
-                    url: urlBase + '/',
+                    url: urlBase + 'rest',
                     params: {'email': email}
                 }).then(function successCallback(response) {
                     Materialize.toast('Email enviado com sucesso!', 2000, 'green rounded');                        
@@ -43,7 +43,7 @@ angular.module("SIM_APP", [])
                     self.senhaC = undefined;                    
                     $http({
                         method: 'PUT',
-                        url: urlBase + '/',
+                        url: urlBase + 'rest',
                         data: self.objetoRecuperacao
                     }).then(function successCallback(response) {
                         Materialize.toast('Senha alterada com sucesso!', 2000, 'green rounded');                        

@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RecuperacaoSenhaRestController {
     
-    @RequestMapping(value = "/recuperar-senha/rest/", method = RequestMethod.GET)
+    @RequestMapping(value = "/recuperar-senha/rest", method = RequestMethod.GET)
     public void enviarEmailRecuperacao(HttpServletResponse response,
             @RequestParam(value = "email") String email) throws Exception {
         
@@ -49,7 +49,7 @@ public class RecuperacaoSenhaRestController {
         }
     }
     
-    @RequestMapping(value = "/recuperar-senha/rest/", method = RequestMethod.PUT)
+    @RequestMapping(value = "/recuperar-senha/rest", method = RequestMethod.PUT)
     public void alterarSenha(HttpServletResponse response,
             @RequestBody ObjetoRecuperacao objeto) throws Exception {
         
