@@ -1,6 +1,6 @@
 
 angular.module("SIM_APP", [])
-        .value('urlBase', '/sim/profissional/rest/')
+        .value('urlBase', '/profissional/rest/')
         .controller("ProfissionalController", function ($http, urlBase, $location) {
             var self = this;
             self.atendimentoList = [];
@@ -131,7 +131,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Atendimento complementado com sucesso!', 2000, 'green rounded');
                         self.atendimento = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/profissional/meus-atendimentos';
+                            window.location.href = '/profissional/meus-atendimentos';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -210,7 +210,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Atendimento cadastrado com sucesso!', 2000, 'green rounded');
                         self.atendimento = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/profissional/meus-atendimentos';
+                            window.location.href = '/profissional/meus-atendimentos';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -308,7 +308,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Dados editados com sucesso!', 2000, 'green rounded');
                         self.profissional = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/profissional/home';
+                            window.location.href = '/profissional/home';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -333,7 +333,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Dados salvos com sucesso!', 2000, 'green rounded');
                         self.instituicao = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/profissional/home';
+                            window.location.href = '/profissional/home';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {

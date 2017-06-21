@@ -1,6 +1,6 @@
 
 angular.module("SIM_APP", [])
-        .value('urlBase', '/sim/instituicao/associar/')
+        .value('urlBase', '/instituicao/associar/')
         .controller("ProfissionalPacienteController", function ($http, urlBase) {
             var self = this;
 
@@ -128,7 +128,7 @@ angular.module("SIM_APP", [])
                 }).then(function successCallback(response) {
                     Materialize.toast('Associação cadastrada com suceeso!', 2000, 'green rounded');
                     setTimeout(function () {
-                        window.location.href = '/sim/instituicao/home';
+                        window.location.href = '/instituicao/home';
                     }, 1500);
                     self.closeModalLoading();
                 }, function errorCallback(response) {

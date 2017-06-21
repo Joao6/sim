@@ -1,6 +1,6 @@
 
 angular.module("SIM_APP", [])
-        .value('urlBase', '/sim/instituicao/rest/')
+        .value('urlBase', '/instituicao/rest/')
         .controller("InstituicaoController", function ($http, urlBase, $location) {
             var self = this;
             self.atendimentoList = [];
@@ -131,7 +131,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Dados salvos com sucesso!', 2000, 'green rounded');
                         self.instituicao = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/instituicao/home';
+                            window.location.href = '/instituicao/home';
                         }, 1500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -316,7 +316,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Paciente cadastrado com sucesso!', 2000, 'green rounded');
                         self.paciente = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/instituicao/pacientes';
+                            window.location.href = '/instituicao/pacientes';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -340,7 +340,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Profissional cadastrado com sucesso!', 2000, 'green rounded');
                         self.profissional = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/instituicao/profissionais';
+                            window.location.href = '/instituicao/profissionais';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -366,7 +366,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Dados alterados com sucesso!', 2000, 'green rounded');
                         self.paciente = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/instituicao/home';
+                            window.location.href = '/instituicao/home';
 
                         }, 500);
                         self.closeModalLoading();
@@ -414,7 +414,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Paciente editado com sucesso!', 2000, 'green rounded');
                         self.paciente = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/instituicao/pacientes';
+                            window.location.href = '/instituicao/pacientes';
 
                         }, 500);
                         self.closeModalLoading();
@@ -453,7 +453,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Profissional editado com sucesso!', 2000, 'green rounded');
                         self.paciente = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/instituicao/profissionais';
+                            window.location.href = '/instituicao/profissionais';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {

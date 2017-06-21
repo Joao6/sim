@@ -7,13 +7,9 @@ package com.sim.web.controller;
 
 import com.sim.model.criteria.PacienteCriteria;
 import com.sim.model.entity.Instituicao;
-import com.sim.model.entity.Paciente;
-import com.sim.model.entity.Profissional;
 import com.sim.model.service.PacienteService;
 import com.sim.model.service.ProfissionalService;
 import com.sim.web.utils.LimitesVersoes;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.http.HttpSession;

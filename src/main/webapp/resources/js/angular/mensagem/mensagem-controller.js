@@ -1,6 +1,6 @@
 
 angular.module("SIM_APP", [])
-        .value('urlBase', '/sim/profissional/rest/')
+        .value('urlBase', '/profissional/rest/')
         .controller("MensagemController", function ($http, urlBase, $location) {
             var self = this;
             self.mensagemList = [];

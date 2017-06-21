@@ -1,6 +1,6 @@
 
 angular.module("SIM_APP", [])
-        .value('urlBase', '/sim/master/rest/')
+        .value('urlBase', '/master/rest/')
         .controller("MasterController", function ($http, urlBase, $location) {
             var self = this;
             self.atendimentoList = [];
@@ -83,7 +83,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Instituição cadastrada com sucesso!', 2000, 'green rounded');
                         self.instituicao = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/master/home';
+                            window.location.href = '/master/home';
                         }, 1500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -105,7 +105,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Dados salvos com sucesso!', 2000, 'green rounded');
                         self.instituicao = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/master/home';
+                            window.location.href = '/master/home';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -293,7 +293,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Dados salvos com sucesso!', 2000, 'green rounded');
                         self.instituicao = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/master/home';
+                            window.location.href = '/master/home';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {
@@ -317,7 +317,7 @@ angular.module("SIM_APP", [])
                         Materialize.toast('Dados salvos com sucesso!', 2000, 'green rounded');
                         self.master = undefined;
                         window.setTimeout(function () {
-                            window.location.href = '/sim/master/home';
+                            window.location.href = '/master/home';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {

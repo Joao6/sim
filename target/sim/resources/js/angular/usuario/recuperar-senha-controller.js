@@ -1,6 +1,6 @@
 
 angular.module("SIM_APP", [])
-        .value('urlBase', '/sim/recuperar-senha/rest')
+        .value('urlBase', '/recuperar-senha/rest')
         .controller("RecuperarSenhaController", function ($http, urlBase, $location) {
             var self = this;
             self.email = undefined;
@@ -24,7 +24,7 @@ angular.module("SIM_APP", [])
                 }).then(function successCallback(response) {
                     Materialize.toast('Email enviado com sucesso!', 2000, 'green rounded');                        
                         window.setTimeout(function () {
-                            window.location.href = '/sim/login';
+                            window.location.href = '/login';
                         }, 500);
                     self.closeModalLoading();
                 }, function errorCallback(response) {
@@ -48,7 +48,7 @@ angular.module("SIM_APP", [])
                     }).then(function successCallback(response) {
                         Materialize.toast('Senha alterada com sucesso!', 2000, 'green rounded');                        
                         window.setTimeout(function () {
-                            window.location.href = '/sim/login';
+                            window.location.href = '/login';
                         }, 500);
                         self.closeModalLoading();
                     }, function errorCallback(response) {

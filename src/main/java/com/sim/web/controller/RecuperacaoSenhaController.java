@@ -1,15 +1,7 @@
 package com.sim.web.controller;
 
-import com.sim.model.entity.Instituicao;
-import com.sim.model.entity.Master;
-import com.sim.model.entity.Profissional;
 import com.sim.model.entity.RecuperacaoSenha;
-import com.sim.model.entity.Usuario;
-import com.sim.model.service.InstituicaoService;
-import com.sim.model.service.MasterService;
-import com.sim.model.service.ProfissionalService;
 import com.sim.model.service.RecuperacaoSenhaService;
-import com.sim.model.service.UsuarioService;
 import java.util.Objects;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

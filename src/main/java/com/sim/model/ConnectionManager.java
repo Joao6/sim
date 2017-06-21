@@ -20,12 +20,12 @@ public class ConnectionManager {
 //Inicio Singleton
     private ConnectionManager() {
         dataSource = new PGPoolingDataSource();
-        dataSource.setDataSourceName("ddm7qrf01u54vl");
-        dataSource.setServerName("ec2-174-129-227-116.compute-1.amazonaws.com");
+        dataSource.setDataSourceName("sim");
+        dataSource.setServerName("localhost");
         dataSource.setPortNumber(5432);
-        dataSource.setDatabaseName("ddm7qrf01u54vl");
-        dataSource.setUser("nxthvyvusuvadw");
-        dataSource.setPassword("37b8527854169b4f6760a0b91d7c8c726ac7433cc7406175dd9038769eae1e2c");
+        dataSource.setDatabaseName("sim");
+        dataSource.setUser("postgres");
+        dataSource.setPassword("postgres");
         dataSource.setMaxConnections(30);
         dataSource.setInitialConnections(10);
     }
