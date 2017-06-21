@@ -1,2 +1,1 @@
-
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* sim
+web: java -jar target/sim.war
