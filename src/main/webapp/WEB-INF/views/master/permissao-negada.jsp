@@ -71,7 +71,7 @@
             });
             
             window.setTimeout(function () {
-                window.location.href = '/sim/master/home';
+                window.location.href = '/master/home';
             }, 5000);
         </script>
     </body>

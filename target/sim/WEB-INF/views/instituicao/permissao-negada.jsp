@@ -71,7 +71,7 @@
             });
             
             window.setTimeout(function () {
-                window.location.href = '/sim/instituicao/home';
+                window.location.href = '/instituicao/home';
             }, 5000);
         </script>
     </body>

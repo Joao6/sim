@@ -3,7 +3,7 @@ mensagem = {
         var me = this;
         $.ajax({
             method: 'GET',
-            url: '/sim/profissional/rest/mensagem/verifica',
+            url: '/profissional/rest/mensagem/verifica',
             success: function (data) {
                 if(data > 0){
                     $('.menuConversa').text('+' + data);

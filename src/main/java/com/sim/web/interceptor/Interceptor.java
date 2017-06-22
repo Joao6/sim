@@ -46,6 +46,7 @@ public class Interceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest req, HttpServletResponse res, Object arg2) throws Exception {
 
         String url = req.getRequestURL().toString();
+        String uri = req.getRequestURI();        
 
         if (url.contains("css") || url.contains("fonts") || url.contains("img") || url.contains("js") || url.contains("less") || url.contains("woff2")) {
             return true;
@@ -80,22 +81,22 @@ public class Interceptor implements HandlerInterceptor {
                 ProfissionalService s = new ProfissionalService();
                 s.readById(usuario.getId());
             }
-
-            req.getSession().setAttribute("usuarioLogado", usuario);
+           
+            req.getSession().setAttribute("usuarioLogado", usuario);            
             if (usuario instanceof Master) {
-                if (url.contains("/instituicao/") || url.contains("/profissional/")) {
+                if (uri.startsWith("/instituicao/") || uri.startsWith("/profissional/")) {
                     res.sendRedirect("/master/permissao-negada");
                     return false;
                 }
             }
             if (usuario instanceof Instituicao) {
-                if (url.contains("/master/") || url.contains("/profissional/")) {
+                if (uri.startsWith("/master/") || uri.startsWith("/profissional/")) {
                     res.sendRedirect("/instituicao/permissao-negada");
                     return false;
                 }
             }
             if (usuario instanceof Profissional) {
-                if (url.contains("/master/") || url.contains("/instituicao/")) {
+                if (uri.startsWith("/master/") || uri.startsWith("/instituicao/")) {
                     res.sendRedirect("/profissional/permissao-negada");
                     return false;
                 }
