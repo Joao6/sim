@@ -22,12 +22,15 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  *
  * @author Joao Pedro
+ * sadasdasd
  */
 @Controller
 public class InstituicaoController {
+    
 
     private final PacienteService pacienteService = new PacienteService();
     private final ProfissionalService profissionalService = new ProfissionalService();
+    
 
     @RequestMapping(value = "/instituicao/home", method = RequestMethod.GET)
     public ModelAndView getInstituicaoHome(String nomeProfissional, String data, String nomePaciente, Long limit, Long offset, HttpSession session) {
